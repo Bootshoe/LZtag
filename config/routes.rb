@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   resources :teams
   root 'teams#index'
   get '/teams/:id/tag', to: 'teams#tag', as: 'score_team'
-  get '/teams/:id/win',   to: 'teams#win'  as: 'win_team'
+  get '/teams/:id/win',   to: 'teams#win',  as: 'win_team'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

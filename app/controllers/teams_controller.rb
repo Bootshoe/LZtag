@@ -66,6 +66,7 @@ class TeamsController < ApplicationController
     @team = Team.find(params[:id])
     @all_teams = Team.all
     @all_teams.each {|team| team.score = 0}
+    @all_teams.each {|team| team.save}
     redirect_to '/'
   end
 
