@@ -62,6 +62,13 @@ class TeamsController < ApplicationController
     redirect_to '/'
   end
 
+  def win
+    @team = Team.find(params[:id])
+    @all_teams = Team.all
+    @all_teams.each {|team| team.score = 0}
+    redirect_to '/'
+  end
+
   # DELETE /teams/1
   # DELETE /teams/1.json
   def destroy
